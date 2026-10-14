@@ -1,5 +1,21 @@
 class Operations:
+
+    # Static methods use only the numbers passed to them.
     @staticmethod
-    def add(a: float, b: float) -> float:
-        # This method uses only a and b. No object state is needed.
+    def add(a, b):
         return a + b
+
+    @staticmethod
+    def subtract(a, b):
+        return a - b
+
+    @staticmethod
+    def multiply(a, b):
+        return a * b
+
+    @staticmethod
+    def divide(a, b):
+        if b == 0:
+            raise ValueError("Cannot divide by zero")
+
+        return a / b
